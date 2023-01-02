@@ -1,0 +1,148 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+::selection{
+    display: none;
+}
+
+.question{
+    place-self: center;
+    margin-top: 15vh;
+    width: 50vw;
+    height: 20vh;
+    color: var(--black-text);
+}
+
+.question h1{
+    font-weight: 600;
+}
+
+.actions-buttons{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    right: 0;
+    gap: 10px;
+    align-items: flex-end;
+    height: 90vh;
+}
+
+.actions-buttons button{
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.question-box{
+    width: fit-content;
+    padding: 5px 20px;
+    border: var(--grey) 2px solid;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.question-box p{
+    border-bottom: 2px var(--grey) dashed;
+}
+    
+
+.disable-card{
+    transition: .2s ease-in;
+    background: var(--grey);
+}
+
+.question-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+strong{
+    color: #ff9d00;
+    font-weight: 400;
+}
+
+.question-answer{
+    height: 50px;
+    width: 100%;
+    margin-top: 35px;
+    border-bottom: 2px var(--grey) solid;
+}
+
+button{
+    font-weight: 500;
+}
+
+.question-option{
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px var(--grey) solid;
+    padding: 5px 15px;
+    border-bottom: 5px var(--grey) solid;
+}
+
+.win-window{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.767);
+    z-index: 999;
+}
+
+.win-window .container{
+    display: flex;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    width: 100vw;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.stats .col{
+    display: flex;
+    align-items: center;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-text{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.stats img {
+    height: 30vh
+}
+
+.you-win{
+    text-align: center;
+}

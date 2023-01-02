@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Game</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="main.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet"> 
+    <!-- css.gg -->
+    <link href='https://css.gg/css' rel='stylesheet'>
+    
+    <!-- UNPKG -->
+    <link href='https://unpkg.com/css.gg/icons/all.css' rel='stylesheet'>
+
+    <!-- JSDelivr -->
+    <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body onload="main()" class="animate__animated animate__bounceIn">
+    <div class="return">
+        <i class="gg-arrow-left" onclick="backQuestion()"></i>
+    </div>
+
+    <div class="logo-g">
+        <h1>Infolingo®</h1>
+    </div>
+
+    <div class="win-window">
+        <div class="container">
+            <div class="stars">
+                <h1 class="you-win">You win?!</h1>
+                <div class="stats">
+                    <img src="img/trophee.png">
+                <div class="col-text">
+                    <p>Acertos:</p>
+                    <span class="acertos">5</span>/<span class="todos">10</span>
+                </div>
+                <div class="col-text">
+                    <span class="porcento">50%</span>
+                </div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="question">
+       <h1>Traduza para o inglês</h1>
+        <div class="question-box">
+            <p class="question-title">Hello, world! I'm a <strong>question</strong> text</p>
+        </div>
+        <div class="question-answer">
+            <p class="question-answer-text"></p>
+        </div>
+        <div class="question-options">
+        </div><br />
+        <div style="text-align: center; color: rgba(0, 0, 0, .5)">
+            <p id="question-answer-correct">test</p>
+        </div>
+    </div>
+    <div class="actions-buttons">
+        <div class="col">
+            <button onclick="clearWords()">Limpar resposta</button>
+        </div>
+        <div class="col">
+            <button onclick="skip()">Pular</button>
+        </div>
+        <div class="col">
+            <button onclick="submit()" class="green">Enviar</button>
+        </div>
+    </div>
+    <script src='exercicios/exercicio.js'></script>
+</body>
+</html>

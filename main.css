@@ -1,0 +1,123 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes firework {
+    0% { 
+      transform: translate(-50%, 60vh);
+      width: 0.5vmin;
+      opacity: 1;
+    }
+    50% { 
+      width: 0.5vmin;
+      opacity: 1;
+    }
+    100% { 
+      width: 45vmin; 
+      opacity: 0; 
+    }
+  }
+  
+  .firework,
+  .firework::before,
+  .firework::after {
+    --top: 60vh;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5vmin;
+    aspect-ratio: 1;
+    background:
+      /* random backgrounds */
+      radial-gradient(circle, #ff0 0.2vmin, #0000 0) 50% 00%,
+      radial-gradient(circle, #ff0 0.3vmin, #0000 0) 00% 50%,
+      radial-gradient(circle, #ff0 0.5vmin, #0000 0) 50% 99%,
+      radial-gradient(circle, #ff0 0.2vmin, #0000 0) 99% 50%,
+      radial-gradient(circle, #ff0 0.3vmin, #0000 0) 80% 90%,
+      radial-gradient(circle, #ff0 0.5vmin, #0000 0) 95% 90%,
+      radial-gradient(circle, #ff0 0.5vmin, #0000 0) 10% 60%,
+      radial-gradient(circle, #ff0 0.2vmin, #0000 0) 31% 80%,
+      radial-gradient(circle, #ff0 0.3vmin, #0000 0) 80% 10%,
+      radial-gradient(circle, #ff0 0.2vmin, #0000 0) 90% 23%,
+      radial-gradient(circle, #ff0 0.3vmin, #0000 0) 45% 20%,
+      radial-gradient(circle, #ff0 0.5vmin, #0000 0) 13% 24%
+      ;
+    background-size: 0.5vmin 0.5vmin;
+    background-repeat: no-repeat;
+    animation: firework 2s infinite;
+  }
+  
+  .firework::before {
+    transform: translate(-50%, -50%) rotate(25deg) !important; 
+  }
+  
+  .firework::after {
+    transform: translate(-50%, -50%) rotate(-37deg) !important;
+  }
+
+:root{
+    --main-green: #58cc02;
+    --main-green-dark: #58a700;
+    --main-blue: #235390;
+    --black-text: #3c3c3c;
+    --grey: #e5e5e5;
+}
+
+button.green{
+    background: var(--main-green);
+    color: white;
+    border: none;
+    border-bottom: var(--main-green-dark) 5px solid;
+}
+
+.logo-g{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center; 
+    color: var(--black-text);
+    font-size: .6rem;  
+}
+
+button.yellow{
+    background: #feda0d;
+    color: white;
+    border: none;
+    border-bottom: #bb910a 5px solid;
+}
+
+.return{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 999;
+    color: #b1b1b1;
+}
+
+button{
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px 100px;
+    border-radius: 10px;
+    background: white;
+    border: #eceaea solid 2px;
+    color: #686868;
+    border-bottom: #eceaea 5px solid;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
